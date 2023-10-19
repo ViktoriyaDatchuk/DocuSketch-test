@@ -32,11 +32,13 @@ export class MyComponentComponent {
   }
 
   buttonClickHandler() {
-    this.isIcon = true;
-    let iconNumber = this.randomNumber(0, this.length - 1);
-    this.myIcon = findIconDefinition({
-      prefix: 'fas',
-      iconName: this.icons[iconNumber] as IconName,
-    });
+    setTimeout(() => {
+      this.isIcon = true;
+      let iconNumber = this.randomNumber(0, this.length - 1);
+      this.myIcon = findIconDefinition({
+        prefix: 'fas',
+        iconName: this.icons[iconNumber] as IconName,
+      });
+    }, 3000);
   }
 }
